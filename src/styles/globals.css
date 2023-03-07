@@ -72,6 +72,7 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   color: var(--light1);
+  background: var(--blue1);
 }
 
 /* container */
@@ -137,9 +138,25 @@ body {
   z-index: 4;
 }
 
-/* ANIMATED BTN */
+/* Nav Line Animation */
+.nav-item:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: currentColor;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.nav-item:hover:after {
+  width: 100%;
+  left: 0;
+}
 
-/* BUTTON UP */
+/* ANIMATED BTN */
 .label-up {
   display: block;
   margin: 0px 30px;

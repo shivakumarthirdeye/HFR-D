@@ -23,7 +23,10 @@ const Header = () => {
           {navItems.map(item => {
             const { id, link, name } = item;
             return (
-              <li key={id} className='text-body2 font-normal'>
+              <li
+                key={id}
+                className='text-body2 nav-item relative text-light1 hover:text-[25px]  transition-all '
+              >
                 <Link href={link}>{name}</Link>
               </li>
             );
