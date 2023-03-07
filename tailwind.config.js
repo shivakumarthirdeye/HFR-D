@@ -131,10 +131,10 @@ module.exports = {
       ],
     },
     colors: {
-      light: `var(--light)`,
-      light: `var(--light)`,
-      light: `var(--light)`,
-      light: `var(--light)`,
+      light1: `var(--light1)`,
+      light2: `var(--light2)`,
+      light3: `var(--light3)`,
+      light4: `var(--light4)`,
       dark1: `var(--dark1)`,
       dark2: `var(--dark2)`,
       dark3: `var(--dark3)`,
@@ -144,7 +144,11 @@ module.exports = {
       blue3: `var(--blue3)`,
       grey1: `var(--grey1)`,
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        satoshi: ['var(--font-satoshi)'],
+      },
+    },
   },
   plugins: [],
 };

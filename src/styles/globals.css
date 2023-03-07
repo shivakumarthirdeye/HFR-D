@@ -70,6 +70,7 @@ body {
   font-family: 'Satoshi';
   font-style: normal;
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 /* container */
@@ -109,8 +110,15 @@ body {
     max-width: 1536px;
   }
 }
-@media (min-width: 1980) {
+@media (min-width: 1600px) {
   .container {
     max-width: 1600px;
   }
+}
+
+.home-hero {
+  background-image: url(/assets/images/bg.png);
+  background-size: cover;
+  width: 100vw;
+  height: 2102px;
 }
