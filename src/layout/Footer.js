@@ -12,12 +12,12 @@ const Footer = () => {
         <div className='flex justify-between items-start'>
           <div>
             <Logo />
-            <h2 className='text-tinyText2 text-light1 mt-2.5'>
+            <h2 className='text-tinyText2  mt-2.5'>
               Human Factors Research & Design
             </h2>
           </div>
 
-          <ul className='text-menuText flex items-center space-x-10 text-light1 tracking-[1px]'>
+          <ul className='text-menuText flex items-center space-x-10  tracking-[1px]'>
             {navItems.map(item => {
               const { id, link, name } = item;
               return (
@@ -34,7 +34,7 @@ const Footer = () => {
           </h3>
           <a
             href='mailto:contact@hfrnd.com'
-            className='text-heading4 text-light1 flex items-center space-x-1'
+            className='text-heading4  flex items-center space-x-1'
           >
             <HiLink /> contact@hfrnd.com
           </a>
@@ -50,7 +50,7 @@ const Footer = () => {
         </div>
       </div>
       <div>
-        <p className='text-center text-tinyText2 mt-6 text-light1'>
+        <p className='text-center text-tinyText2 mt-6 '>
           Copyright 2023. Human Factors Research & Design Pvt.Ltd . All rights
           reserved.
         </p>

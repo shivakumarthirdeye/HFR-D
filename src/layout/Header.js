@@ -2,11 +2,12 @@ import Logo from '@/components/assets/Logo';
 import Button from '@/components/utils/Button';
 import { navItems } from '@/extra/constants';
 import Link from 'next/link';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 const Header = () => {
   return (
     <header
-      className='fixed top-0 backdrop-blur-lg w-full py-6'
+      className='fixed top-0 backdrop-blur-[20px] w-full py-7  z-20 px-[18px] sm:px-1'
       style={{
         background: `radial-gradient(113.15% 113.94% at -1.09% 16.83%, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 100%)`,
         boxShadow: `inset -5px -5px 250px rgba(255, 255, 255, 0.02)`,
@@ -18,7 +19,7 @@ const Header = () => {
             <Logo />
           </Link>
         </div>
-        <ul className='flex items-center space-x-12  text-light1'>
+        <ul className=' items-center space-x-12 hidden lg:flex  '>
           {navItems.map(item => {
             const { id, link, name } = item;
             return (
@@ -28,9 +29,14 @@ const Header = () => {
             );
           })}
           <li>
-            <Button className='bg-dark1' text='Let’s Talk' />
+            <Button className='bg-dark1 hover:bg-blue1' text='Let’s Talk' />
           </li>
         </ul>
+        <div className='block lg:hidden '>
+          <button className='text-[30px]'>
+            <GiHamburgerMenu />
+          </button>
+        </div>
       </nav>
     </header>
   );

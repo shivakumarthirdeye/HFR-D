@@ -3,9 +3,10 @@ import React from 'react';
 const Button = ({ className, text }) => {
   return (
     <button
-      className={`px-8 py-[18px] text-menuText rounded-full ${className}`}
+      className={`inline-block h-[52px] leading-[52px]  text-center overflow-hidden animateBtn  hover:shadow-sm rounded-full ${className} transition `}
     >
-      {text}
+      <span class='label-up'>{text}</span>
+      <span class='label-up'>{text}</span>
     </button>
   );
 };
