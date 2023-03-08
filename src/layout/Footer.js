@@ -34,7 +34,7 @@ const Footer = () => {
           </h3>
           <a
             href='mailto:contact@hfrnd.com'
-            className='text-heading4  flex items-center space-x-1'
+            className='text-heading4  flex w-fit items-center space-x-1 hover:text-blue1 transition-colors  duration-300'
           >
             <HiLink /> contact@hfrnd.com
           </a>

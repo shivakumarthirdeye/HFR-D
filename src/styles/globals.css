@@ -72,13 +72,13 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   color: var(--light1);
-  background: var(--blue1);
+  background: var(--light1);
 }
 
 /* container */
 .container {
   width: 100%;
-  @apply mx-auto;
+  @apply mx-auto px-4 sm:px-2;
 }
 @media (min-width: 640px) {
   .container {
@@ -118,8 +118,12 @@ body {
   }
 }
 
-.home-hero {
-  background-image: url(/assets/images/bg.png);
+section {
+  @apply py-6 sm:py-10 md:py-16 lg:py-20 xl:py-24 2xl:py-32;
+}
+
+#home-hero {
+  background-image: url(/assets/images/home/hero-bg.png);
   background-size: cover;
   width: 100vw;
   height: 2102px;
@@ -136,6 +140,14 @@ body {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
   opacity: 0.6;
   z-index: 4;
+}
+
+#experiences {
+  background-image: url(/assets/images/home/experiences-bg.png);
+  background-size: cover;
+  width: 100vw;
+  background-position: center left;
+  position: relative;
 }
 
 /* Nav Line Animation */
@@ -157,9 +169,12 @@ body {
 }
 
 /* ANIMATED BTN */
+.animateBtn:hover {
+  box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.18);
+}
 .label-up {
   display: block;
-  margin: 0px 30px;
+
   height: 100%;
   position: relative;
   top: 0%;
@@ -168,4 +183,9 @@ body {
 
 .animateBtn:hover .label-up {
   top: -100%;
+}
+
+.overlay::before,
+.overlay::after {
+  background: none !important;
 }

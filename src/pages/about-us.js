@@ -1,12 +1,13 @@
+import Clients from '@/components/Clients';
+import LetsConnect from '@/components/LetsConnect';
 import Layout from '@/layout/Layout';
 import React from 'react';
 
 const AboutUs = () => {
   return (
     <Layout>
-      <div className='h-screen flex items-center justify-center bg-blue1'>
-        About US
-      </div>
+      <Clients />
+      <LetsConnect />
     </Layout>
   );
 };

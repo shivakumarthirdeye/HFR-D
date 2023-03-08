@@ -1,11 +1,14 @@
 import HeroSign from '@/components/assets/HeroSign';
+import Clients from '@/components/Clients';
+import LetsConnect from '@/components/LetsConnect';
 import Button from '@/components/utils/Button';
 import Layout from '@/layout/Layout';
 
 export default function Home() {
   return (
     <Layout>
-      <section className='home-hero flex flex-col '>
+      {/* HERO */}
+      <section id='home-hero' className=' flex flex-col '>
         <div className='absolute right-5   top-14 '>
           <HeroSign />
         </div>
@@ -20,8 +23,8 @@ export default function Home() {
                 <br />
                 <span className='text-heading1'>with Human Intervention</span>
               </h1>
-              <p className='my-6 text-body1'>
-                Providing Human centered solutions while creating joyful <br />
+              <p className='my-6 text-body1 max-w-[853px]'>
+                Providing Human centered solutions while creating joyful
                 experiences.
               </p>
             </div>
@@ -33,7 +36,8 @@ export default function Home() {
                   Human Factors <br /> Research & Design
                 </h2>
                 <Button
-                  className='bg-light1 text-dark1 mt hover:bg-blue1 hover:text-light1'
+                  animate
+                  className='bg-light1 text-dark1'
                   text='Know Us More'
                 />
               </div>
@@ -56,6 +60,36 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/*EOF HERO */}
+      {/* Solutions */}
+      <section className='container bg-light1 my-32'>
+        <div>
+          <h3 className='text-heading4 text-dark1 max-w-[760px]'>
+            We have consistently been delivering successful and game changing
+            products and solutions for our customers.
+          </h3>
+        </div>
+      </section>
+      {/*EOF Solutions */}
+      <Clients />
+      {/*Building Experiences */}
+      <section className='py-32'>
+        <div className='container flex justify-between  items-start '>
+          <div>
+            <h1 className='text-heading2 text-dark1 max-w-[864px]'>
+              Building Experiences step by step
+            </h1>
+          </div>
+          <div>
+            <h3 className='text-body1 text-dark1 max-w-[524px]'>
+              Working towards the success of our customer’s strategic vision and
+              practical implementation of design.
+            </h3>
+          </div>
+        </div>
+      </section>
+      {/*EOF Building Experiences */}
+      <LetsConnect />
     </Layout>
   );
 }
