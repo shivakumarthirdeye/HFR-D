@@ -1,4 +1,5 @@
 @import url('font.css');
+@import url('bg-images.css');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -78,7 +79,14 @@ body {
 /* container */
 .container {
   width: 100%;
-  @apply mx-auto px-4 sm:px-2;
+  max-width: clamp(0px, 89vw, 1600px) !important;
+  @apply mx-auto;
+}
+@media (max-width: 500px) {
+  .container {
+    max-width: 100% !important;
+    @apply mx-auto px-4;
+  }
 }
 @media (min-width: 640px) {
   .container {
@@ -120,34 +128,6 @@ body {
 
 section {
   @apply py-6 sm:py-10 md:py-16 lg:py-20 xl:py-24 2xl:py-32;
-}
-
-#home-hero {
-  background-image: url(/assets/images/home/hero-bg.png);
-  background-size: cover;
-  width: 100vw;
-  height: 2102px;
-  background-position: center right;
-  position: relative;
-}
-.home-hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
-  opacity: 0.6;
-  z-index: 4;
-}
-
-#experiences {
-  background-image: url(/assets/images/home/experiences-bg.png);
-  background-size: cover;
-  width: 100vw;
-  background-position: center left;
-  position: relative;
 }
 
 /* Nav Line Animation */

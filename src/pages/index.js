@@ -3,47 +3,55 @@ import Clients from '@/components/Clients';
 import LetsConnect from '@/components/LetsConnect';
 import Button from '@/components/utils/Button';
 import Layout from '@/layout/Layout';
+import Link from 'next/link';
 
 export default function Home() {
   return (
     <Layout>
       {/* HERO */}
       <section id='home-hero' className=' flex flex-col '>
-        <div className='absolute right-5   top-14 '>
+        <div className='absolute right-5  top-96  lg:top-14 '>
           <HeroSign />
         </div>
 
         <div className=' z-10 flex flex-col flex-1'>
           <div className='container'>
-            <div className='py-[350px]'>
-              <h1>
-                <span className='text-title font-normal'>
-                  Building Experiences for Industries
+            <div className='py-[250px]'>
+              <h1 className='text-center lg:text-left'>
+                <span className='text-heading4 md:!font-normal md:text-heading3 lg:text-heading2 xl:text-title '>
+                  Building Experiences for Industries{' '}
+                  <span className='xl:hidden'>&nbsp;</span>
                 </span>
-                <br />
-                <span className='text-heading1'>with Human Intervention</span>
+                <br className='hidden 2xl:block' />
+                <span className='text-heading4 lg:!font-bold md:text-heading3 lg:text-heading2 xl:text-heading1'>
+                  with Human Intervention
+                </span>
               </h1>
-              <p className='my-6 text-body1 max-w-[853px]'>
+              <p className='my-2 md:my-6  text-center lg:text-left text-tinyText1 sm:text-body4 md:text-body2 xl:text-body1 max-w-[853px]'>
                 Providing Human centered solutions while creating joyful
                 experiences.
               </p>
             </div>
           </div>
-          <div className='flex container flex-col justify-end  mt-auto flex-1  mb-[160px]'>
-            <div className='flex justify-between'>
+          <div className='flex container flex-col  justify-end  flex-1 md:mt-[-40px] lg:mt-auto   mb-8 xl:mb-[160px]'>
+            <div className='flex flex-col xl:flex-row justify-between'>
               <div>
-                <h2 className='text-heading2 mb-16'>
+                <h2 className='text-body1  md:text-heading4 lg:text-heading3 xl:text-heading2 '>
                   Human Factors <br /> Research & Design
                 </h2>
-                <Button
-                  animate
-                  className='bg-light1 text-dark1'
-                  text='Know Us More'
-                />
+                <div className='mt-16 hidden'>
+                  <Link href='/about-us'>
+                    <Button
+                      animate
+                      className='bg-light1 text-dark1'
+                      text='Know Us More'
+                    />
+                  </Link>
+                </div>
               </div>
 
-              <div className='max-w-[680px]'>
-                <p className='text-body1'>
+              <div className='max-w-[680px] mt-6 xl:mt-0'>
+                <p className='lg:text-left text-tinyText1 sm:text-body4 md:text-body2 xl:text-body1'>
                   <span>
                     We are one of the finest Design Studios with a highly
                     talented team specializing in helping create delightfully
@@ -55,6 +63,15 @@ export default function Home() {
                   function, pleasure and reason with joy of use for its users
                   across a gamut of industries, governments and startups.
                 </p>
+              </div>
+              <div className='mt-6 xl:hidden'>
+                <Link href='/about-us'>
+                  <Button
+                    animate
+                    className='bg-light1 text-dark1'
+                    text='Know Us More'
+                  />
+                </Link>
               </div>
             </div>
           </div>
@@ -73,7 +90,7 @@ export default function Home() {
       {/*EOF Solutions */}
       <Clients />
       {/*Building Experiences */}
-      <section className='py-32'>
+      {/* <section className='py-32'>
         <div className='container flex justify-between  items-start '>
           <div>
             <h1 className='text-heading2 text-dark1 max-w-[864px]'>
@@ -87,7 +104,7 @@ export default function Home() {
             </h3>
           </div>
         </div>
-      </section>
+      </section> */}
       {/*EOF Building Experiences */}
       <LetsConnect />
     </Layout>

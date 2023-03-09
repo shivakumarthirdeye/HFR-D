@@ -4,10 +4,10 @@ import connectPng from '/public/assets/images/letsconnect.png';
 
 const LetsConnect = () => {
   return (
-    <section className='bg-dark1  relative overflow-hidden'>
+    <section className='bg-dark1 h-[332px] md:h-auto  relative overflow-hidden'>
       <div className='container flex'>
         <div>
-          <h2 className='text-body1 sm:text-heading4 md:text-heading3 xl:text-heading2   max-w-[941px]'>
+          <h2 className='text-body1  relative z-10 sm:text-heading4 md:text-heading3 xl:text-heading2   max-w-[941px]'>
             Create Experiences that matter! Let’s Talk
           </h2>
           <div className='mt-6 lg:mt-16'>
@@ -18,7 +18,7 @@ const LetsConnect = () => {
             />
           </div>
         </div>
-        <div className='absolute right-0 bottom-[-1s0px] sm:bottom-[-5vw] 2xl:top-0'>
+        <div className='absolute right-0 bottom-[-0px] sm:bottom-[-5vw]  z-[5] 2xl:top-0'>
           <img src={connectPng.src} alt='' className='w-[80vw] sm:w-[55vw]' />
         </div>
       </div>

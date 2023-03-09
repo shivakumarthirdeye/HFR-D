@@ -315,7 +315,7 @@ const Clients = () => {
     <section id='experiences'>
       <div className='container  flex flex-col lg:flex-row justify-between   items-start '>
         <div>
-          <h1 className='text-body1 sm:text-heading4 md:text-heading3 xl:text-heading2 text-dark1 max-w-[864px]'>
+          <h1 className='text-body1 sm:text-heading4 md:text-heading3  xl:text-heading2 text-dark1 max-w-[864px]'>
             Creating unique experiences for every industry
           </h1>
           <div className='mt-16 hidden lg:block'>
@@ -343,7 +343,7 @@ const Clients = () => {
       </div>
       <div className='my-10'>
         <Marquee
-          className=' h-[180px] overflow-y-hidden '
+          className='h-[100px] md:h-[120px] lg:h-[160px] xl:h-[180px] overflow-y-hidden'
           speed={50}
           direction='left'
         >
@@ -354,13 +354,13 @@ const Clients = () => {
                 src={item.image.src}
                 alt={item.name}
                 title={item.name.toUpperCase()}
-                className='mx-12'
+                className='mx-2 md:mx-10 lg:mx-12 scale-[.60] md:scale-[.70] lg:scale-75 xl:scale-100'
               />
             );
           })}
         </Marquee>
         <Marquee
-          className=' h-[180px] overflow-y-hidden'
+          className='h-[100px] md:h-[120px] lg:h-[160px] xl:h-[180px] overflow-y-hidden'
           speed={50}
           direction='right'
         >
@@ -371,7 +371,7 @@ const Clients = () => {
                 src={item.image.src}
                 alt={item.name}
                 title={item.name.toUpperCase()}
-                className='mx-12'
+                className='mx-4 md:mx-8 lg:mx-12 scale-[.60] md:scale-[.70] lg:scale-75 xl:scale-100'
               />
             );
           })}
